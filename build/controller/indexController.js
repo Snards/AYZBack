@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 class IndexController {
     index(req, res) {
-        res.json({ 'Mensaje': 'La API para equipos esta en /api/public/cursos' });
+        res.json({ 'Mensaje': 'La API esta en /api/public/...' });
     }
 }
 const indexController = new IndexController();

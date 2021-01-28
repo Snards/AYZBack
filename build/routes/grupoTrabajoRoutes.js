@@ -11,7 +11,7 @@ class GrupoTrabajoRouter {
         this.config();
     }
     config() {
-        this.router.get('/list/', grupoTrabajoController_1.default.obtenerGruposTrabajo);
+        this.router.get('/', grupoTrabajoController_1.default.obtenerGruposTrabajo);
     }
 }
 const grupoTrabajoRouter = new GrupoTrabajoRouter;

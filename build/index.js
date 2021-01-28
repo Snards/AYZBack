@@ -8,6 +8,8 @@ const morgan_1 = __importDefault(require("morgan"));
 const express_1 = __importDefault(require("express"));
 const indexRoutes_1 = __importDefault(require("./routes/indexRoutes"));
 const areasPracticasRoutes_1 = __importDefault(require("./routes/areasPracticasRoutes"));
+const grupoTrabajoRoutes_1 = __importDefault(require("./routes/grupoTrabajoRoutes"));
+const grupoAreasRoutes_1 = __importDefault(require("./routes/grupoAreasRoutes"));
 class Serve {
     constructor() {
         this.app = express_1.default();
@@ -23,6 +25,8 @@ class Serve {
     routes() {
         this.app.use('/', indexRoutes_1.default);
         this.app.use('/api/public/areasPracticas', areasPracticasRoutes_1.default);
+        this.app.use('/api/public/grupoTrabajo', grupoTrabajoRoutes_1.default);
+        this.app.use('/api/public/grupoAreas', grupoAreasRoutes_1.default);
     }
     start() {
         this.app.listen(this.app.get('PORT'), () => {

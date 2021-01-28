@@ -4,6 +4,8 @@ import express, { Application } from 'express';
 
 import indexRoutes from './routes/indexRoutes';
 import areasPracticasRoutes from "./routes/areasPracticasRoutes";
+import grupoTrabajoRoutes from "./routes/grupoTrabajoRoutes";
+import grupoAreasRoutes from "./routes/grupoAreasRoutes";
 
 class Serve {
     app: Application;
@@ -23,6 +25,8 @@ class Serve {
     routes(): void{
         this.app.use('/', indexRoutes);        
         this.app.use('/api/public/areasPracticas', areasPracticasRoutes);
+        this.app.use('/api/public/grupoTrabajo', grupoTrabajoRoutes);
+        this.app.use('/api/public/grupoAreas', grupoAreasRoutes);
     }
 
     start(): void{
